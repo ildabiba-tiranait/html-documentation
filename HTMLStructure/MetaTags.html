@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A sample page demonstrating HTML meta tags.">
+    <meta name="author" content="Your Name">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="HTML, meta tags, example">
+    <title>Meta Tags Explained</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 24px;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+        .explanation {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .code {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow-x: auto;
+            white-space: pre;
+            font-family: monospace;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Meta Tags Explained</h1>
+
+        <div class="explanation">
+            <p><code>&lt;meta&gt;</code> tags provide metadata about an HTML document. Metadata is information about the document that is not displayed directly on the page but is used by browsers and search engines. Here is a breakdown of the <code>&lt;meta&gt;</code> tag and its attributes:</p>
+
+            <h2>Attributes</h2>
+
+            <ul>
+                <li><strong>name</strong>: Specifies the name of the metadata. This attribute is used to provide specific information, such as the description or author of the document.</li>
+                <li><strong>content</strong>: Provides the value associated with the <strong>name</strong> attribute. For instance, it might contain a description of the page's content or the name of the author.</li>
+                <li><strong>http-equiv</strong>: Provides an HTTP header for the information/value of the <strong>content</strong> attribute. This is used for setting values that would normally be sent via HTTP headers, such as <code>Content-Type</code> or <code>Cache-Control</code>.</li>
+                <li><strong>charset</strong>: Specifies the character encoding for the HTML document. For example, <code>UTF-8</code> is a common character encoding that supports most characters and symbols used in various languages.</li>
+            </ul>
+        </div>
+
+        <div class="code">
+            &lt;meta charset="UTF-8"&gt;<br>
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+            &lt;meta name="description" content="A sample page demonstrating HTML meta tags."&gt;<br>
+            &lt;meta name="author" content="Your Name"&gt;<br>
+            &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br>
+            &lt;meta name="robots" content="index, follow"&gt;<br>
+            &lt;meta name="keywords" content="HTML, meta tags, example"&gt;
+        </div>
+    </div>
+</body>
+</html>

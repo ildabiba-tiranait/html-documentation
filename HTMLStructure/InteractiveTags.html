@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Tags Example</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 24px;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            font-size: 20px;
+            color: #007BFF;
+            margin-bottom: 10px;
+        }
+        .section p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .code {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow-x: auto;
+            white-space: pre;
+            font-family: monospace;
+            margin-top: 10px;
+        }
+        .explanation {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive HTML Tags: &lt;details&gt; and &lt;summary&gt;</h1>
+
+        <!-- Details Element -->
+        <div class="section">
+            <h2>&lt;details&gt;</h2>
+            <p>
+                The <code>&lt;details&gt;</code> element is used to create a disclosure widget from which the user can obtain additional information or controls. It is often used to provide expandable content, such as a collapsible section of a page.
+            </p>
+            <p>
+                When a <code>&lt;details&gt;</code> element is clicked, it toggles between showing and hiding its content. This behavior is built into the browser and does not require JavaScript to function.
+            </p>
+            <div class="explanation">
+                <strong>Attributes:</strong>
+                <ul>
+                    <li><strong>open:</strong> A boolean attribute that specifies whether the <code>&lt;details&gt;</code> element should be visible (open) when the page loads. If present, the details will be open by default. If omitted, the details will be closed initially.</li>
+                    <li><strong>id:</strong> Provides a unique identifier for the <code>&lt;details&gt;</code> element, useful for targeting with CSS or JavaScript.</li>
+                    <li><strong>class:</strong> Assigns one or more class names to the <code>&lt;details&gt;</code> element, allowing for custom styling with CSS.</li>
+                    <li><strong>style:</strong> Applies inline CSS styles directly to the <code>&lt;details&gt;</code> element.</li>
+                    <li><strong>title:</strong> Provides additional information about the <code>&lt;details&gt;</code> element, usually displayed as a tooltip when the user hovers over the element.</li>
+                </ul>
+            </div>
+            <div class="code">
+                &lt;details open&gt;<br>
+                &nbsp;&nbsp;&lt;summary&gt;More Information&lt;/summary&gt;<br>
+                &nbsp;&nbsp;&lt;p&gt;Here is some additional content that can be expanded or collapsed.&lt;/p&gt;<br>
+                &lt;/details&gt;
+            </div>
+        </div>
+
+        <!-- Summary Element -->
+        <div class="section">
+            <h2>&lt;summary&gt;</h2>
+            <p>
+                The <code>&lt;summary&gt;</code> element is used within a <code>&lt;details&gt;</code> element to define a visible heading for the disclosure widget. The content of the <code>&lt;summary&gt;</code> is always visible, and clicking it will toggle the visibility of the content within the <code>&lt;details&gt;</code> element.
+            </p>
+            <p>
+                The <code>&lt;summary&gt;</code> element provides a way for users to see a brief description or title of the expandable content, making it clear what additional information or controls are available.
+            </p>
+            <div class="explanation">
+                <strong>Attributes:</strong>
+                <ul>
+                    <li><strong>id:</strong> Provides a unique identifier for the <code>&lt;summary&gt;</code> element, which can be used for targeting with CSS or JavaScript.</li>
+                    <li><strong>class:</strong> Assigns one or more class names to the <code>&lt;summary&gt;</code> element for custom styling with CSS.</li>
+                    <li><strong>style:</strong> Applies inline CSS styles directly to the <code>&lt;summary&gt;</code> element.</li>
+                    <li><strong>title:</strong> Provides additional information about the <code>&lt;summary&gt;</code> element, typically displayed as a tooltip when the user hovers over the element.</li>
+                </ul>
+            </div>
+            <div class="code">
+                &lt;details&gt;<br>
+                &nbsp;&nbsp;&lt;summary&gt;Click to Expand&lt;/summary&gt;<br>
+                &nbsp;&nbsp;&lt;p&gt;This is the hidden content that becomes visible when the <code>&lt;summary&gt;</code> is clicked.&lt;/p&gt;<br>
+                &lt;/details&gt;
+            </div>
+        </div>
+    </div>
+</body>
+</html>

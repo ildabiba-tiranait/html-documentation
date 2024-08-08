@@ -1,0 +1,109 @@
+body{
+    background-color: hsl(220, 42%, 14%);
+    background: linear-gradient(to left, #151f33, #2c1f49); 
+}
+
+.header { 
+    padding: 10px 0;
+}
+
+.nav-color{
+    background-color: #151f33 !important;
+    background: linear-gradient(to left, #151f33, #2c1f49); 
+    color: white;
+}
+
+
+
+.nav-color a {
+    color: white;
+}
+
+.container-80 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.main {
+    margin: 0 auto;
+    
+}
+.wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    
+}
+
+.left-sidebar {
+    height:auto;
+    max-height: 60vh;
+    background-color: #151f33 !important;
+    color: white;
+
+}
+
+.left-sidebar-color {
+    background-color: #151f33 !important;
+    color: white;
+}
+.left-sidebar, .right-sidebar {
+    flex: 1;
+    background-color: #151f33;
+    color: white;
+    
+}
+
+main {
+    flex: 2;
+    padding: 10px;
+    color: white;
+}
+
+.input-search {
+border-radius: 5px;
+background-color: #151f33;
+
+border: 2px solid gray;
+color: gray;
+padding: 5px;
+padding-left: 10px;
+}
+
+.support-btn {
+    background-color: #1843bb;
+    border-radius: 20px;
+    color: white;
+    padding-inline: 15px;
+    margin-inline: 10px;
+
+}
+
+.btn-no-border:focus, .btn-no-border:active, .btn-no-border:hover {
+    color: white !important;
+    box-shadow: none !important;  
+}
+
+.form-control-no-border:focus, .form-control-no-border:active {
+    background-color: #151f33 !important;
+    border: 2px solid gray !important;
+    color: gray !important;    
+    box-shadow: none !important;  
+    outline: none; 
+}
+
+.footer { 
+    padding: 40px 0;
+}
+.footer a {
+    color: white;
+}
+.footer a:hover {
+    color: #1843bb;
+}
+ .social-icons a {
+    margin: 0 10px;
+    color: #1843bb;
+}
+
+
+

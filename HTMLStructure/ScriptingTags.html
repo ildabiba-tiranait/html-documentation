@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tags Documentation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 24px;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+        .explanation {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .code {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow-x: auto;
+            white-space: pre;
+            font-family: monospace;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HTML Tags Documentation</h1>
+
+        <div class="explanation">
+            <h2>&lt;script&gt; Tag</h2>
+            <p>The <code>&lt;script&gt;</code> element is used to define client-side scripts, usually written in JavaScript. This tag can either include JavaScript code directly or reference an external JavaScript file. It can be placed in the document's head or body, depending on when you want the script to be executed.</p>
+            <p><strong>Attributes:</strong></p>
+            <ul>
+                <li><strong>src</strong>: Specifies the URL of an external script file. If this attribute is provided, the script content is loaded from the given URL. For example, <code>src="script.js"</code>.</li>
+                <li><strong>type</strong>: Specifies the scripting language. The default is <code>text/javascript</code>. In modern HTML5, this attribute is optional as JavaScript is the default scripting language.</li>
+                <li><strong>async</strong>: Indicates that the script should be executed asynchronously as soon as it is available. This is useful for scripts that do not depend on the DOM or other scripts. However, scripts with this attribute may execute in any order.</li>
+                <li><strong>defer</strong>: Indicates that the script should be executed after the page has finished parsing. This ensures that the script runs in the order it appears in the document, but only after the HTML is completely loaded.</li>
+                <li><strong>crossorigin</strong>: Handles cross-origin requests for the script. Values include:
+                    <ul>
+                        <li><code>anonymous</code>: Requests are made without credentials.</li>
+                        <li><code>use-credentials</code>: Requests are made with credentials, such as cookies or HTTP authentication.</li>
+                    </ul>
+                </li>
+                <li><strong>integrity</strong>: Provides a way to verify that the fetched script has not been altered by comparing it to a specified cryptographic hash. This helps ensure the script's integrity and security.</li>
+                <li><strong>id</strong>: Assigns a unique identifier to the script element, which can be used for styling or scripting purposes.</li>
+                <li><strong>class</strong>: Allows for CSS styling by applying one or more class names to the script element.</li>
+                <li><strong>style</strong>: Applies inline CSS styles directly to the script element, though it’s not commonly used.</li>
+                <li><strong>title</strong>: Provides additional descriptive information about the script element, often used for tooltips or accessibility.</li>
+            </ul>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;script src="script.js" type="text/javascript" async&gt;&lt;/script&gt;
+&lt;script src="https://example.com/script.js" crossorigin="anonymous" integrity="sha384-..." defer&gt;&lt;/script&gt;
+            </pre>
+        </div>
+
+        <div class="explanation">
+            <h2>&lt;noscript&gt; Tag</h2>
+            <p>The <code>&lt;noscript&gt;</code> element is used to define alternate content for users whose browsers do not support client-side scripting or have JavaScript disabled. This tag ensures that users without JavaScript can still receive meaningful content or instructions.</p>
+            <p><strong>Attributes:</strong></p>
+            <ul>
+                <li><strong>id</strong>: Provides a unique identifier for the <code>&lt;noscript&gt;</code> element, which can be used for styling or scripting purposes.</li>
+                <li><strong>class</strong>: Assigns one or more class names to the <code>&lt;noscript&gt;</code> element, allowing for CSS styling.</li>
+                <li><strong>style</strong>: Applies inline CSS styles directly to the <code>&lt;noscript&gt;</code> element, though this is rarely needed.</li>
+                <li><strong>title</strong>: Offers additional descriptive information about the <code>&lt;noscript&gt;</code> element, which can be useful for tooltips or accessibility.</li>
+            </ul>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;noscript&gt;
+    &lt;p&gt;JavaScript is required to view this content. Please enable JavaScript in your browser settings.&lt;/p&gt;
+&lt;/noscript&gt;
+            </pre>
+        </div>
+    </div>
+</body>
+</html>

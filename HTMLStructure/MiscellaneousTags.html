@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tags Documentation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 24px;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+        .explanation {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .code {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow-x: auto;
+            white-space: pre;
+            font-family: monospace;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HTML Tags Documentation</h1>
+
+        <div class="explanation">
+            <h2>&lt;base&gt; Tag</h2>
+            <p>The <code>&lt;base&gt;</code> element sets a base URL for all relative URLs in the document. This means that any relative URLs (like those used in hyperlinks and images) will be resolved relative to this base URL. This helps avoid the need to use absolute URLs for every reference in your HTML, simplifying URL management and making it easier to maintain the document.</p>
+            <p><strong>Attributes:</strong></p>
+            <ul>
+                <li><strong>href</strong>: Specifies the base URL for all relative URLs in the document. For example, if you set <code>href="https://example.com"</code>, then a relative link like <code>&lt;a href="page.html"&gt;Link&lt;/a&gt;</code> will be resolved to <code>https://example.com/page.html</code>.</li>
+                <li><strong>target</strong>: Sets the default target for all hyperlinks and forms. Common values include:
+                    <ul>
+                        <li><code>_blank</code>: Opens the link in a new tab or window.</li>
+                        <li><code>_self</code>: Opens the link in the same frame (default behavior).</li>
+                        <li><code>_parent</code>: Opens the link in the parent frame.</li>
+                        <li><code>_top</code>: Opens the link in the full window.</li>
+                    </ul>
+                </li>
+                <li><strong>id, class, style, title</strong>: These attributes can be used for additional styling or identification, though they are less commonly applied to <code>&lt;base&gt;</code>.</li>
+            </ul>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;base href="https://example.com" target="_blank"&gt;
+            </pre>
+        </div>
+
+        <div class="explanation">
+            <h2>&lt;template&gt; Tag</h2>
+            <p>The <code>&lt;template&gt;</code> element is used to hold client-side content that is not rendered when the page loads. Instead, it provides a way to define reusable HTML snippets that can be used dynamically via JavaScript. This is particularly useful for scenarios where you need to generate content on the fly or repeatedly reuse HTML structures.</p>
+            <p><strong>Attributes:</strong></p>
+            <ul>
+                <li><strong>id</strong>: A unique identifier for the template, allowing it to be accessed via JavaScript.</li>
+                <li><strong>class</strong>: Assigns a class to the template for styling purposes, though it’s often not used since the template content isn't rendered initially.</li>
+                <li><strong>style</strong>: Applies CSS styles directly to the template, though this is less common.</li>
+                <li><strong>title</strong>: Provides additional descriptive information, often for accessibility or tooltips.</li>
+            </ul>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;template id="my-template"&gt;
+    &lt;div class="template-content"&gt;
+        &lt;h2&gt;This is a template&lt;/h2&gt;
+        &lt;p&gt;This content will not be rendered until it is used programmatically.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+            </pre>
+        </div>
+
+        <div class="explanation">
+            <h2>&lt;canvas&gt; Tag</h2>
+            <p>The <code>&lt;canvas&gt;</code> element provides a space for dynamic graphics rendering through scripting (usually JavaScript). The canvas API allows you to draw shapes, text, images, and other graphics on the fly. This is ideal for applications requiring real-time graphics, such as games or data visualizations.</p>
+            <p><strong>Attributes:</strong></p>
+            <ul>
+                <li><strong>width</strong>: Specifies the width of the canvas in pixels. If not specified, the default width is 300 pixels.</li>
+                <li><strong>height</strong>: Specifies the height of the canvas in pixels. The default height is 150 pixels if not specified.</li>
+                <li><strong>id</strong>: Assigns a unique identifier to the canvas element for access via JavaScript.</li>
+                <li><strong>class</strong>: Allows for CSS styling by applying one or more class names to the canvas.</li>
+                <li><strong>style</strong>: Applies inline CSS styles directly to the canvas element.</li>
+                <li><strong>title</strong>: Provides additional information about the canvas, often used for tooltips or accessibility.</li>
+            </ul>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;canvas id="myCanvas" width="500" height="400"&gt;&lt;/canvas&gt;
+&lt;script&gt;
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+    ctx.fillStyle = 'blue';
+    ctx.fillRect(20, 20, 150, 100);
+    ctx.strokeStyle = 'red';
+    ctx.strokeRect(20, 20, 150, 100);
+&lt;/script&gt;
+            </pre>
+        </div>
+
+        <div class="explanation">
+            <h2>&lt;svg&gt; Tag</h2>
+            <p>The <code>&lt;svg&gt;</code> element is used to create scalable vector graphics. Unlike raster images, vector graphics do not lose quality when scaled to different sizes, making SVGs ideal for high-resolution displays and responsive design. SVGs can be created using various shapes, paths, and text elements, and styled or animated with CSS and JavaScript.</p>
+            <p><strong>Attributes:</strong></p>
+            <ul>
+                <li><strong>width</strong>: Specifies the width of the SVG viewport. This can be defined in pixels or percentages. For example, <code>width="200"</code> sets the width to 200 pixels.</li>
+                <li><strong>height</strong>: Specifies the height of the SVG viewport. Like width, this can be set in pixels or percentages. For instance, <code>height="200"</code> sets the height to 200 pixels.</li>
+                <li><strong>viewBox</strong>: Defines the coordinate system and scaling for the SVG. It consists of four values: <code>min-x</code>, <code>min-y</code>, <code>width</code>, and <code>height</code>. This allows the SVG to scale its content proportionally within the defined viewport.</li>
+                <li><strong>id</strong>: Provides a unique identifier for the SVG element, which can be used for styling with CSS or manipulation with JavaScript.</li>
+                <li><strong>class</strong>: Assigns one or more class names to the SVG, allowing for styling with CSS.</li>
+                <li><strong>style</strong>: Applies inline CSS styles directly to the SVG element.</li>
+                <li><strong>title</strong>: Offers additional descriptive information about the SVG, often used for tooltips or accessibility purposes.</li>
+            </ul>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;svg width="200" height="200" viewBox="0 0 100 100"&gt;
+    &lt;circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="yellow" /&gt;
+    &lt;rect x="10" y="10" width="30" height="30" stroke="black" stroke-width="2" fill="blue" /&gt;
+    &lt;text x="50" y="90" font-size="12" text-anchor="middle"&gt;SVG&lt;/text&gt;
+&lt;/svg&gt;
+            </pre>
+        </div>
+    </div>
+</body>
+</html>

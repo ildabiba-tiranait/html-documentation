@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detailed explanations of HTML table tags with examples.">
+    <title>HTML Table Tags Explained</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 24px;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+        .explanation {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .code {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow-x: auto;
+            white-space: pre;
+            font-family: monospace;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HTML Table Tags Explained</h1>
+
+        <div class="explanation">
+            <h2>&lt;table&gt; Tag</h2>
+            <p>The <code>&lt;table&gt;</code> element defines a table in an HTML document. Tables are used to present data in a structured format, with rows and columns.</p>
+            <p><strong>Attributes:</strong></p>
+            <ul>
+                <li><strong>border</strong>: Specifies the width of the border around the table. For example, <code>border="1"</code> creates a 1-pixel border.</li>
+                <li><strong>cellpadding</strong>: Specifies the space between the cell wall and the cell content. This is measured in pixels.</li>
+                <li><strong>cellspacing</strong>: Specifies the space between cells. This is also measured in pixels.</li>
+                <li><strong>summary</strong>: Provides a summary of the table's purpose and structure, which is helpful for screen readers and accessibility.</li>
+                <li><strong>id</strong>: Provides a unique identifier for the table element.</li>
+                <li><strong>class</strong>: Assigns one or more class names for styling purposes.</li>
+                <li><strong>style</strong>: Applies inline CSS styles directly to the table element.</li>
+                <li><strong>title</strong>: Offers additional information about the table element, often displayed as a tooltip.</li>
+            </ul>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;table border="1" cellpadding="5" cellspacing="0"&gt;
+    &lt;caption&gt;Sample Table&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Header 1&lt;/th&gt;
+            &lt;th&gt;Header 2&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Data 1&lt;/td&gt;
+            &lt;td&gt;Data 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td colspan="2"&gt;Footer&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;
+            </pre>
+        </div>
+
+        <div class="explanation">
+            <h2>&lt;caption&gt; Tag</h2>
+            <p>The <code>&lt;caption&gt;</code> element defines a caption for a table. It is used to provide a title or description for the table, making it easier to understand the table's content.</p>
+            <p><strong>Attributes:</strong> Similar to the <code>&lt;table&gt;</code> tag.</p>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;table&gt;
+    &lt;caption&gt;Employee Details&lt;/caption&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Position&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;John Doe&lt;/td&gt;
+        &lt;td&gt;Manager&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+            </pre>
+        </div>
+
+        <div class="explanation">
+            <h2>&lt;thead&gt; Tag</h2>
+            <p>The <code>&lt;thead&gt;</code> element groups the header content in a table. It is used to define a set of rows that contain column headers, which are often repeated at the top of the table.</p>
+            <p><strong>Attributes:</strong> Similar to the <code>&lt;table&gt;</code> tag.</p>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;Age&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Alice&lt;/td&gt;
+            &lt;td&gt;30&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+            </pre>
+        </div>
+
+        <div class="explanation">
+            <h2>&lt;tbody&gt; Tag</h2>
+            <p>The <code>&lt;tbody&gt;</code> element groups the body content in a table. It contains the main data rows of the table and is typically used to separate these rows from the header and footer rows.</p>
+            <p><strong>Attributes:</strong> Similar to the <code>&lt;table&gt;</code> tag.</p>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Product&lt;/th&gt;
+            &lt;th&gt;Price&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Laptop&lt;/td&gt;
+            &lt;td&gt;$1000&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+            </pre>
+        </div>
+
+        <div class="explanation">
+            <h2>&lt;tfoot&gt; Tag</h2>
+            <p>The <code>&lt;tfoot&gt;</code> element groups the footer content in a table. It is used to define a set of rows that typically contain summary information or footnotes. The <code>&lt;tfoot&gt;</code> element is often placed after the <code>&lt;tbody&gt;</code> but is rendered before it, which allows the footer to be visible during scrolling in long tables.</p>
+            <p><strong>Attributes:</strong> Similar to the <code>&lt;table&gt;</code> tag.</p>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;table&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td colspan="2"&gt;Total&lt;/td&gt;
+            &lt;td&gt;$2000&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Item 1&lt;/td&gt;
+            &lt;td&gt;$500&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+            </pre>
+        </div>
+
+        <div class="explanation">
+            <h2>&lt;tr&gt; Tag</h2>
+            <p>The <code>&lt;tr&gt;</code> element defines a row in a table. It is used to group together table cells (<code>&lt;td&gt;</code> or <code>&lt;th&gt;</code>) that belong to the same row.</p>
+            <p><strong>Attributes:</strong> Similar to the <code>&lt;table&gt;</code> tag.</p>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Header 1&lt;/th&gt;
+        &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Data 1&lt;/td&gt;
+        &lt;td&gt;Data 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+            </pre>
+        </div>
+
+        <div class="explanation">
+            <h2>&lt;th&gt; Tag</h2>
+            <p>The <code>&lt;th&gt;</code> element defines a header cell in a table. Header cells are used to label the columns or rows in a table and are typically displayed with bold text and centered alignment by default.</p>
+            <p><strong>Attributes:</strong></p>
+            <ul>
+                <li><strong>colspan</strong>: Specifies the number of columns a header cell should span.</li>
+                <li><strong>rowspan</strong>: Specifies the number of rows a header cell should span.</li>
+                <li><strong>scope</strong>: Specifies whether the header cell is for a column, row, or a group of columns or rows.</li>
+                <li><strong>abbr</strong>: Provides an abbreviated version of the content in a header cell, useful for accessibility.</li>
+                <li><strong>id</strong>: Provides a unique identifier for the header cell.</li>
+                <li><strong>class</strong>: Assigns one or more class names for styling purposes.</li>
+                <li><strong>style</strong>: Applies inline CSS styles directly to the header cell.</li>
+                <li><strong>title</strong>: Offers additional information about the header cell, often displayed as a tooltip.</li>
+            </ul>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th colspan="2"&gt;Header&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Cell 1&lt;/td&gt;
+        &lt;td&gt;Cell 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+            </pre>
+        </div>
+
+        <div class="explanation">
+            <h2>&lt;td&gt; Tag</h2>
+            <p>The <code>&lt;td&gt;</code> element defines a cell in a table. It is used to hold data in a table and can be used within rows defined by the <code>&lt;tr&gt;</code> element.</p>
+            <p><strong>Attributes:</strong></p>
+            <ul>
+                <li><strong>colspan</strong>: Specifies the number of columns a cell should span.</li>
+                <li><strong>rowspan</strong>: Specifies the number of rows a cell should span.</li>
+                <li><strong>headers</strong>: Specifies the header cells that apply to a cell, used to provide additional context for accessibility.</li>
+                <li><strong>id</strong>: Provides a unique identifier for the cell.</li>
+                <li><strong>class</strong>: Assigns one or more class names for styling purposes.</li>
+                <li><strong>style</strong>: Applies inline CSS styles directly to the cell.</li>
+                <li><strong>title</strong>: Offers additional information about the cell, often displayed as a tooltip.</li>
+            </ul>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td colspan="2"&gt;Spanned Cell&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Cell 1&lt;/td&gt;
+        &lt;td&gt;Cell 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+            </pre>
+        </div>
+    </div>
+</body>
+</html>

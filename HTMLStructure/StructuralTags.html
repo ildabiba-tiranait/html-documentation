@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Structural Tags Documentation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 24px;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+        .explanation {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .code {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow-x: auto;
+            white-space: pre;
+            font-family: monospace;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HTML Structural Tags Documentation</h1>
+
+        <div class="explanation">
+            <h2>&lt;html&gt; Tag</h2>
+            <p>The <code>&lt;html&gt;</code> element is the root element of an HTML document. It encompasses all other HTML elements (except for the <code>&lt;!DOCTYPE&gt;</code> declaration). This tag provides the structure for the HTML document and is essential for defining the document's language using the <code>lang</code> attribute.</p>
+            <p><strong>Attributes:</strong></p>
+            <ul>
+                <li><strong>lang</strong>: Specifies the language of the document's content. For example, <code>lang="en"</code> for English or <code>lang="fr"</code> for French.</li>
+            </ul>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;html lang="en"&gt;
+    &lt;head&gt;...&lt;/head&gt;
+    &lt;body&gt;...&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+        </div>
+
+        <div class="explanation">
+            <h2>&lt;head&gt; Tag</h2>
+            <p>The <code>&lt;head&gt;</code> element contains metadata and links to external resources for the HTML document. It includes elements like <code>&lt;title&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;style&gt;</code>, and <code>&lt;script&gt;</code>. This section does not display content directly but provides essential information and resources for the document.</p>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document Title&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+            </pre>
+        </div>
+
+        <div class="explanation">
+            <h2>&lt;body&gt; Tag</h2>
+            <p>The <code>&lt;body&gt;</code> element encloses all the content of the HTML document, including text, images, links, and other media. It is the main content area where users interact with the page. This tag previously included attributes like <code>background</code>, <code>bgcolor</code>, <code>text</code>, <code>link</code>, <code>vlink</code>, and <code>alink</code>, but these attributes are deprecated in modern HTML.</p>
+            <p><strong>Attributes:</strong> (Deprecated)</p>
+            <ul>
+                <li><strong>background</strong>: Specifies a background image for the document. Deprecated.</li>
+                <li><strong>bgcolor</strong>: Sets the background color. Deprecated.</li>
+                <li><strong>text</strong>: Sets the color of the text. Deprecated.</li>
+                <li><strong>link</strong>: Sets the color of unvisited links. Deprecated.</li>
+                <li><strong>vlink</strong>: Sets the color of visited links. Deprecated.</li>
+                <li><strong>alink</strong>: Sets the color of active links. Deprecated.</li>
+            </ul>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;Welcome to my website.&lt;/p&gt;
+&lt;/body&gt;
+            </pre>
+        </div>
+
+        <div class="explanation">
+            <h2>&lt;header&gt; Tag</h2>
+            <p>The <code>&lt;header&gt;</code> element represents introductory content for a section or the whole document. It often includes headings, navigation links, and other introductory elements. It is used to group together elements that provide context or navigation for the page or section.</p>
+            <p><strong>Attributes:</strong></p>
+            <ul>
+                <li><strong>id</strong>: Provides a unique identifier for the header element.</li>
+                <li><strong>class</strong>: Assigns one or more class names for styling purposes.</li>
+                <li><strong>style</strong>: Applies inline CSS styles directly to the header element.</li>
+                <li><strong>title</strong>: Offers additional information about the header element, often displayed as a tooltip.</li>
+            </ul>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;header&gt;
+    &lt;h1&gt;Site Title&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;a href="#home"&gt;Home&lt;/a&gt;
+        &lt;a href="#about"&gt;About&lt;/a&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+            </pre>
+        </div>
+
+        <div class="explanation">
+            <h2>&lt;footer&gt; Tag</h2>
+            <p>The <code>&lt;footer&gt;</code> element represents the footer of a document or section. It is typically used to contain contact information, copyright notices, or related links. It provides additional context or resources at the end of a document or section.</p>
+            <p><strong>Attributes:</strong> Similar to the <code>&lt;header&gt;</code> tag.</p>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;footer&gt;
+    &lt;p&gt;© 2024 My Website&lt;/p&gt;
+    &lt;a href="#contact"&gt;Contact Us&lt;/a&gt;
+&lt;/footer&gt;
+            </pre>
+        </div>
+
+        <div class="explanation">
+            <h2>&lt;main&gt; Tag</h2>
+            <p>The <code>&lt;main&gt;</code> element indicates the primary content of a document, excluding headers, footers, and sidebars. It helps search engines and assistive technologies understand the main content of the page. There should be only one <code>&lt;main&gt;</code> element per document.</p>
+            <p><strong>Attributes:</strong></p>
+            <ul>
+                <li><strong>id</strong>: Provides a unique identifier for the main element.</li>
+                <li><strong>class</strong>: Assigns one or more class names for styling purposes.</li>
+                <li><strong>style</strong>: Applies inline CSS styles directly to the main element.</li>
+                <li><strong>title</strong>: Offers additional information about the main element, often displayed as a tooltip.</li>
+            </ul>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;main&gt;
+    &lt;h2&gt;Main Content&lt;/h2&gt;
+    &lt;p&gt;This is the primary content of the page.&lt;/p&gt;
+&lt;/main&gt;
+            </pre>
+        </div>
+
+        <div class="explanation">
+            <h2>&lt;section&gt; Tag</h2>
+            <p>The <code>&lt;section&gt;</code> element defines a section within a document. It is typically used to group related content together, often with its own heading. Sections can be used to divide content into thematic areas.</p>
+            <p><strong>Attributes:</strong></p>
+            <ul>
+                <li><strong>id</strong>: Provides a unique identifier for the section element.</li>
+                <li><strong>class</strong>: Assigns one or more class names for styling purposes.</li>
+                <li><strong>style</strong>: Applies inline CSS styles directly to the section element.</li>
+                <li><strong>title</strong>: Offers additional information about the section element, often displayed as a tooltip.</li>
+            </ul>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;section&gt;
+    &lt;h2&gt;Section Title&lt;/h2&gt;
+    &lt;p&gt;Content for this section goes here.&lt;/p&gt;
+&lt;/section&gt;
+            </pre>
+        </div>
+
+        <div class="explanation">
+            <h2>&lt;article&gt; Tag</h2>
+            <p>The <code>&lt;article&gt;</code> element represents a self-contained piece of content, such as a blog post, news article, or user comment. Articles are meant to be independently distributable or reusable.</p>
+            <p><strong>Attributes:</strong></p>
+            <ul>
+                <li><strong>id</strong>: Provides a unique identifier for the article element.</li>
+                <li><strong>class</strong>: Assigns one or more class names for styling purposes.</li>
+                <li><strong>style</strong>: Applies inline CSS styles directly to the article element.</li>
+                <li><strong>title</strong>: Offers additional information about the article element, often displayed as a tooltip.</li>
+            </ul>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;article&gt;
+    &lt;h2&gt;Article Title&lt;/h2&gt;
+    &lt;p&gt;This is a self-contained piece of content.&lt;/p&gt;
+&lt;/article&gt;
+            </pre>
+        </div>
+
+        <div class="explanation">
+            <h2>&lt;nav&gt; Tag</h2>
+            <p>The <code>&lt;nav&gt;</code> element defines a set of navigation links. It helps users and search engines identify the sections of the page dedicated to navigation. Typically, it includes a list of links to other sections or pages.</p>
+            <p><strong>Attributes:</strong></p>
+            <ul>
+                <li><strong>id</strong>: Provides a unique identifier for the nav element.</li>
+                <li><strong>class</strong>: Assigns one or more class names for styling purposes.</li>
+                <li><strong>style</strong>: Applies inline CSS styles directly to the nav element.</li>
+                <li><strong>title</strong>: Offers additional information about the nav element, often displayed as a tooltip.</li>
+            </ul>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;nav&gt;
+    &lt;a href="#home"&gt;Home&lt;/a&gt;
+    &lt;a href="#services"&gt;Services&lt;/a&gt;
+    &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;
+            </pre>
+        </div>
+
+        <div class="explanation">
+            <h2>&lt;aside&gt; Tag</h2>
+            <p>The <code>&lt;aside&gt;</code> element contains content tangentially related to the main content, such as sidebars, pull quotes, or additional information. It provides supplementary content that adds context or extra information to the main content.</p>
+            <p><strong>Attributes:</strong></p>
+            <ul>
+                <li><strong>id</strong>: Provides a unique identifier for the aside element.</li>
+                <li><strong>class</strong>: Assigns one or more class names for styling purposes.</li>
+                <li><strong>style</strong>: Applies inline CSS styles directly to the aside element.</li>
+                <li><strong>title</strong>: Offers additional information about the aside element, often displayed as a tooltip.</li>
+            </ul>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;aside&gt;
+    &lt;p&gt;This is supplementary content related to the main article.&lt;/p&gt;
+&lt;/aside&gt;
+            </pre>
+        </div>
+
+        <div class="explanation">
+            <h2>&lt;div&gt; Tag</h2>
+            <p>The <code>&lt;div&gt;</code> element is a generic container used to group and style content. It does not affect the layout by itself but can be used to apply CSS styles or JavaScript functions to a block of content. It is often used for structuring and organizing elements.</p>
+            <p><strong>Attributes:</strong></p>
+            <ul>
+                <li><strong>id</strong>: Provides a unique identifier for the div element.</li>
+                <li><strong>class</strong>: Assigns one or more class names for styling purposes.</li>
+                <li><strong>style</strong>: Applies inline CSS styles directly to the div element.</li>
+                <li><strong>title</strong>: Offers additional information about the div element, often displayed as a tooltip.</li>
+            </ul>
+        </div>
+
+        <div class="code">
+            <pre>
+&lt;div&gt;
+    &lt;p&gt;This is a generic container for content.&lt;/p&gt;
+&lt;/div&gt;
+            </pre>
+        </div>
+
+    </div>
+</body>
+</html>

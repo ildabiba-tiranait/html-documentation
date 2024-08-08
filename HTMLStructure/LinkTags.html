@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Tags Example</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 24px;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            font-size: 20px;
+            color: #007BFF;
+            margin-bottom: 10px;
+        }
+        .section p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .code {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow-x: auto;
+            white-space: pre;
+            font-family: monospace;
+            margin-top: 10px;
+        }
+        .explanation {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Link Tags: &lt;a&gt; and &lt;link&gt;</h1>
+
+        <!-- Anchor Element -->
+        <div class="section">
+            <h2>&lt;a&gt;</h2>
+            <p>
+                The <code>&lt;a&gt;</code> element, also known as the anchor element, is used to define a hyperlink that links one page to another. It is one of the most important HTML elements for creating navigable web pages.
+            </p>
+            <p>
+                The <code>&lt;a&gt;</code> element can link to external resources, internal pages, or even trigger actions such as downloading files. It is versatile and supports various attributes to control its behavior and appearance.
+            </p>
+            <div class="explanation">
+                <strong>Attributes:</strong>
+                <ul>
+                    <li><strong>href:</strong> Specifies the URL of the page the link goes to. This can be an absolute URL (e.g., <code>https://www.example.com</code>) or a relative URL (e.g., <code>page.html</code>).</li>
+                    <li><strong>target:</strong> Specifies where to open the linked document. Values can include:
+                        <ul>
+                            <li><code>_self</code>: Opens the link in the same frame or window (default).</li>
+                            <li><code>_blank</code>: Opens the link in a new window or tab.</li>
+                            <li><code>_parent</code>: Opens the link in the parent frame.</li>
+                            <li><code>_top</code>: Opens the link in the full window.</li>
+                        </ul>
+                    </li>
+                    <li><strong>download:</strong> Specifies that the target will be downloaded when a user clicks on the hyperlink. It can also specify a name for the file to be downloaded.</li>
+                    <li><strong>rel:</strong> Specifies the relationship between the current document and the linked document. Common values include <code>noopener</code>, <code>noreferrer</code>, and <code>nofollow</code>.</li>
+                    <li><strong>hreflang:</strong> Specifies the language of the linked document. Useful for linking to documents in different languages.</li>
+                    <li><strong>type:</strong> Specifies the media type (MIME type) of the linked document. For example, <code>text/html</code> for HTML documents.</li>
+                    <li><strong>id:</strong> Provides a unique identifier for the <code>&lt;a&gt;</code> element, useful for targeting with CSS or JavaScript.</li>
+                    <li><strong>class:</strong> Assigns one or more class names to the <code>&lt;a&gt;</code> element for styling with CSS.</li>
+                    <li><strong>style:</strong> Applies inline CSS styles directly to the <code>&lt;a&gt;</code> element.</li>
+                    <li><strong>title:</strong> Provides additional information about the <code>&lt;a&gt;</code> element, usually displayed as a tooltip when the user hovers over the link.</li>
+                </ul>
+            </div>
+            <div class="code">
+                &lt;a href="https://www.example.com" target="_blank" download="file.pdf" rel="noopener" hreflang="en" type="application/pdf" id="exampleLink" class="link" style="color: blue;" title="Visit Example.com"&gt;Visit Example&lt;/a&gt;
+            </div>
+        </div>
+
+        <!-- Link Element -->
+        <div class="section">
+            <h2>&lt;link&gt;</h2>
+            <p>
+                The <code>&lt;link&gt;</code> element is used to define the relationship between a document and an external resource. It is commonly used in the <code>&lt;head&gt;</code> section of an HTML document to link to stylesheets or other external resources.
+            </p>
+            <p>
+                The <code>&lt;link&gt;</code> element does not have closing tags and is self-contained. It is essential for linking CSS files to style the HTML document.
+            </p>
+            <div class="explanation">
+                <strong>Attributes:</strong>
+                <ul>
+                    <li><strong>href:</strong> Specifies the URL of the linked document. For example, the URL of a CSS file.</li>
+                    <li><strong>rel:</strong> Specifies the relationship between the current document and the linked document. Common values include <code>stylesheet</code> for linking CSS files and <code>icon</code> for defining a favicon.</li>
+                    <li><strong>type:</strong> Specifies the media type (MIME type) of the linked document. For example, <code>text/css</code> for CSS files.</li>
+                    <li><strong>media:</strong> Specifies the media type for which the linked resource is designed. For example, <code>screen</code> for screen displays or <code>print</code> for print styles.</li>
+                    <li><strong>hreflang:</strong> Specifies the language of the linked document. Useful for linking to stylesheets for different languages.</li>
+                    <li><strong>sizes:</strong> Specifies the size of the linked resource, often used with icons to define their sizes.</li>
+                    <li><strong>id:</strong> Provides a unique identifier for the <code>&lt;link&gt;</code> element, useful for targeting with CSS or JavaScript.</li>
+                    <li><strong>class:</strong> Assigns one or more class names to the <code>&lt;link&gt;</code> element for styling with CSS.</li>
+                    <li><strong>style:</strong> Applies inline CSS styles directly to the <code>&lt;link&gt;</code> element.</li>
+                    <li><strong>title:</strong> Provides additional information about the <code>&lt;link&gt;</code> element, usually displayed as a tooltip when the user hovers over the link.</li>
+                </ul>
+            </div>
+            <div class="code">
+                &lt;link href="styles.css" rel="stylesheet" type="text/css" media="screen" hreflang="en" sizes="16x16" id="stylesheetLink" class="linkStyles" style="display: none;" title="Main Stylesheet"&gt;
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Tags Example</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 24px;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            font-size: 20px;
+            color: #007BFF;
+            margin-bottom: 10px;
+        }
+        .section p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .code {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow-x: auto;
+            white-space: pre;
+            font-family: monospace;
+            margin-top: 10px;
+        }
+        .explanation {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Media Tags: &lt;img&gt;, &lt;figure&gt;, &lt;figcaption&gt;, &lt;audio&gt;, &lt;video&gt;, &lt;source&gt;, &lt;track&gt;, &lt;object&gt;, &lt;embed&gt;, and &lt;iframe&gt;</h1>
+
+        <!-- Image Element -->
+        <div class="section">
+            <h2>&lt;img&gt;</h2>
+            <p>
+                The <code>&lt;img&gt;</code> element is used to embed images into a web document. It allows you to display visual content such as photos, illustrations, or graphics.
+            </p>
+            <p>
+                The <code>&lt;img&gt;</code> element is self-contained, meaning it does not have a closing tag and it does not contain any content between opening and closing tags.
+            </p>
+            <div class="explanation">
+                <strong>Attributes:</strong>
+                <ul>
+                    <li><strong>src:</strong> Specifies the path to the image file. This attribute is required.</li>
+                    <li><strong>alt:</strong> Provides alternative text for the image. This is important for accessibility and in case the image cannot be displayed.</li>
+                    <li><strong>width:</strong> Specifies the width of the image. Can be a number (pixels) or a percentage.</li>
+                    <li><strong>height:</strong> Specifies the height of the image. Can be a number (pixels) or a percentage.</li>
+                    <li><strong>usemap:</strong> Specifies an image as a client-side image-map, allowing interactive areas within the image.</li>
+                    <li><strong>longdesc:</strong> Specifies a URL to a detailed description of the image. Useful for providing additional context.</li>
+                    <li><strong>id:</strong> Provides a unique identifier for the <code>&lt;img&gt;</code> element, useful for targeting with CSS or JavaScript.</li>
+                    <li><strong>class:</strong> Assigns one or more class names to the <code>&lt;img&gt;</code> element for styling with CSS.</li>
+                    <li><strong>style:</strong> Applies inline CSS styles directly to the <code>&lt;img&gt;</code> element.</li>
+                    <li><strong>title:</strong> Provides additional information about the <code>&lt;img&gt;</code> element, usually displayed as a tooltip when the user hovers over the image.</li>
+                </ul>
+            </div>
+            <div class="code">
+                &lt;img src="path/to/image.jpg" alt="Description of image" width="300" height="200" usemap="#map" longdesc="details.html" id="myImage" class="responsive" style="border: 1px solid #ddd;" title="Sample Image"&gt;
+            </div>
+        </div>
+
+        <!-- Figure Element -->
+        <div class="section">
+            <h2>&lt;figure&gt;</h2>
+            <p>
+                The <code>&lt;figure&gt;</code> element is used to encapsulate self-contained content, such as illustrations, diagrams, photos, or code listings. It is often used in conjunction with the <code>&lt;figcaption&gt;</code> element to provide a caption or description for the content.
+            </p>
+            <p>
+                The <code>&lt;figure&gt;</code> element allows the content to be referenced and grouped together with a caption, making it easier to maintain the relationship between the content and its description.
+            </p>
+            <div class="explanation">
+                <strong>Attributes:</strong>
+                <ul>
+                    <li><strong>id:</strong> Provides a unique identifier for the <code>&lt;figure&gt;</code> element, useful for targeting with CSS or JavaScript.</li>
+                    <li><strong>class:</strong> Assigns one or more class names to the <code>&lt;figure&gt;</code> element for styling with CSS.</li>
+                    <li><strong>style:</strong> Applies inline CSS styles directly to the <code>&lt;figure&gt;</code> element.</li>
+                    <li><strong>title:</strong> Provides additional information about the <code>&lt;figure&gt;</code> element, usually displayed as a tooltip when the user hovers over the figure.</li>
+                </ul>
+            </div>
+            <div class="code">
+                &lt;figure id="myFigure" class="figure" style="text-align: center;" title="Figure Example"&gt;
+                    &lt;img src="path/to/image.jpg" alt="Description"&gt;
+                    &lt;figcaption&gt;A descriptive caption for the image.&lt;/figcaption&gt;
+                &lt;/figure&gt;
+            </div>
+        </div>
+
+        <!-- Figcaption Element -->
+        <div class="section">
+            <h2>&lt;figcaption&gt;</h2>
+            <p>
+                The <code>&lt;figcaption&gt;</code> element provides a caption or description for the <code>&lt;figure&gt;</code> element. It is used to describe or provide context for the content contained within the <code>&lt;figure&gt;</code>.
+            </p>
+            <p>
+                The <code>&lt;figcaption&gt;</code> element should be placed as the first or last child within the <code>&lt;figure&gt;</code> element.
+            </p>
+            <div class="explanation">
+                <strong>Attributes:</strong>
+                <ul>
+                    <li><strong>id:</strong> Provides a unique identifier for the <code>&lt;figcaption&gt;</code> element, useful for targeting with CSS or JavaScript.</li>
+                    <li><strong>class:</strong> Assigns one or more class names to the <code>&lt;figcaption&gt;</code> element for styling with CSS.</li>
+                    <li><strong>style:</strong> Applies inline CSS styles directly to the <code>&lt;figcaption&gt;</code> element.</li>
+                    <li><strong>title:</strong> Provides additional information about the <code>&lt;figcaption&gt;</code> element, usually displayed as a tooltip when the user hovers over the caption.</li>
+                </ul>
+            </div>
+            <div class="code">
+                &lt;figure&gt;
+                    &lt;img src="path/to/image.jpg" alt="Description"&gt;
+                    &lt;figcaption id="caption" class="caption" style="font-style: italic;" title="Caption Example"&gt;A detailed caption for the image.&lt;/figcaption&gt;
+                &lt;/figure&gt;
+            </div>
+        </div>
+
+        <!-- Audio Element -->
+        <div class="section">
+            <h2>&lt;audio&gt;</h2>
+            <p>
+                The <code>&lt;audio&gt;</code> element is used to embed sound content, such as music or speech, into a document. It allows users to listen to audio directly from the web page.
+            </p>
+            <p>
+                The <code>&lt;audio&gt;</code> element can include multiple audio files for different formats, ensuring compatibility with various browsers.
+            </p>
+            <div class="explanation">
+                <strong>Attributes:</strong>
+                <ul>
+                    <li><strong>src:</strong> Specifies the URL of the audio file to be played. It is often used with the <code>&lt;source&gt;</code> element instead.</li>
+                    <li><strong>controls:</strong> Specifies that audio controls (play, pause, volume) should be displayed.</li>
+                    <li><strong>autoplay:</strong> Specifies that the audio should start playing as soon as it is ready.</li>
+                    <li><strong>loop:</strong> Specifies that the audio should start over again when it finishes.</li>
+                    <li><strong>muted:</strong> Specifies that the audio output should be muted.</li>
+                    <li><strong>id:</strong> Provides a unique identifier for the <code>&lt;audio&gt;</code> element, useful for targeting with CSS or JavaScript.</li>
+                    <li><strong>class:</strong> Assigns one or more class names to the <code>&lt;audio&gt;</code> element for styling with CSS.</li>
+                    <li><strong>style:</strong> Applies inline CSS styles directly to the <code>&lt;audio&gt;</code> element.</li>
+                    <li><strong>title:</strong> Provides additional information about the <code>&lt;audio&gt;</code> element, usually displayed as a tooltip when the user hovers over the audio controls.</li>
+                </ul>
+            </div>
+            <div class="code">
+                &lt;audio src="path/to/audio.mp3" controls autoplay loop muted id="audioPlayer" class="audio" style="width: 100%;" title="Audio Example"&gt;&lt;/audio&gt;
+            </div>
+        </div>
+
+        <!-- Video Element -->
+        <div class="section">
+            <h2>&lt;video&gt;</h2>
+            <p>
+                The <code>&lt;video&gt;</code> element is used to embed video content in a document. It allows users to watch video clips directly from the web page.
+            </p>
+            <p>
+                The <code>&lt;video&gt;</code> element can include multiple video files for different formats and provide controls for playback.
+            </p>
+            <div class="explanation">
+                <strong>Attributes:</strong>
+                <ul>
+                    <li><strong>src:</strong> Specifies the URL of the video file. It is often used with the <code>&lt;source&gt;</code> element instead.</li>
+                    <li><strong>controls:</strong> Specifies that video controls (play, pause, volume) should be displayed.</li>
+                    <li><strong>autoplay:</strong> Specifies that the video should start playing as soon as it is ready.</li>
+                    <li><strong>loop:</strong> Specifies that the video should start over again when it finishes.</li>
+                    <li><strong>muted:</strong> Specifies that the video output should be muted.</li>
+                    <li><strong>poster:</strong> Specifies an image to be shown while the video is downloading or until the user hits the play button.</li>
+                    <li><strong>width:</strong> Specifies the width of the video player.</li>
+                    <li><strong>height:</strong> Specifies the height of the video player.</li>
+                    <li><strong>id:</strong> Provides a unique identifier for the <code>&lt;video&gt;</code> element, useful for targeting with CSS or JavaScript.</li>
+                    <li><strong>class:</strong> Assigns one or more class names to the <code>&lt;video&gt;</code> element for styling with CSS.</li>
+                    <li><strong>style:</strong> Applies inline CSS styles directly to the <code>&lt;video&gt;</code> element.</li>
+                    <li><strong>title:</strong> Provides additional information about the <code>&lt;video&gt;</code> element, usually displayed as a tooltip when the user hovers over the video player.</li>
+                </ul>
+            </div>
+            <div class="code">
+                &lt;video src="path/to/video.mp4" controls autoplay loop muted poster="path/to/poster.jpg" width="640" height="360" id="videoPlayer" class="video" style="border: 1px solid #ddd;" title="Video Example"&gt;&lt;/video&gt;
+            </div>
+        </div>
+
+        <!-- Source Element -->
+        <div class="section">
+            <h2>&lt;source&gt;</h2>
+            <p>
+                The <code>&lt;source&gt;</code> element is used inside the <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> elements to specify multiple media resources. It allows you to provide different formats of the same media file to ensure compatibility with various browsers.
+            </p>
+            <p>
+                The <code>&lt;source&gt;</code> elements are selected based on their format and the browser's capabilities.
+            </p>
+            <div class="explanation">
+                <strong>Attributes:</strong>
+                <ul>
+                    <li><strong>src:</strong> Specifies the URL of the media file.</li>
+                    <li><strong>type:</strong> Specifies the media type of the media file, such as <code>audio/mp3</code> or <code>video/mp4</code>.</li>
+                    <li><strong>id:</strong> Provides a unique identifier for the <code>&lt;source&gt;</code> element, useful for targeting with CSS or JavaScript.</li>
+                    <li><strong>class:</strong> Assigns one or more class names to the <code>&lt;source&gt;</code> element for styling with CSS.</li>
+                    <li><strong>style:</strong> Applies inline CSS styles directly to the <code>&lt;source&gt;</code> element.</li>
+                    <li><strong>title:</strong> Provides additional information about the <code>&lt;source&gt;</code> element, usually displayed as a tooltip when the user hovers over the source.</li>
+                </ul>
+            </div>
+            <div class="code">
+                &lt;video controls&gt;
+                    &lt;source src="path/to/video.mp4" type="video/mp4"&gt;
+                    &lt;source src="path/to/video.webm" type="video/webm"&gt;
+                    Your browser does not support the video tag.
+                &lt;/video&gt;
+            </div>
+        </div>
+
+        <!-- Track Element -->
+        <div class="section">
+            <h2>&lt;track&gt;</h2>
+            <p>
+                The <code>&lt;track&gt;</code> element provides text tracks for <code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code> elements. These tracks can be used for subtitles, captions, descriptions, or chapters.
+            </p>
+            <p>
+                The <code>&lt;track&gt;</code> element should be used inside the <code>&lt;video&gt;</code> or <code>&lt;audio&gt;</code> element to provide supplementary text content.
+            </p>
+            <div class="explanation">
+                <strong>Attributes:</strong>
+                <ul>
+                    <li><strong>src:</strong> Specifies the URL of the track file.</li>
+                    <li><strong>kind:</strong> Specifies the kind of text track. Values include:
+                        <ul>
+                            <li><code>subtitles</code>: Subtitles for the video.</li>
+                            <li><code>captions</code>: Captions for the video.</li>
+                            <li><code>descriptions</code>: Descriptions of the video content.</li>
+                            <li><code>chapters</code>: Chapters or sections of the video.</li>
+                        </ul>
+                    </li>
+                    <li><strong>srclang:</strong> Specifies the language of the track text data.</li>
+                    <li><strong>label:</strong> Specifies a user-readable title for the text track.</li>
+                    <li><strong>default:</strong> Specifies that the track should be enabled if the user's preferences do not indicate that another track would be more appropriate.</li>
+                    <li><strong>id:</strong> Provides a unique identifier for the <code>&lt;track&gt;</code> element, useful for targeting with CSS or JavaScript.</li>
+                    <li><strong>class:</strong> Assigns one or more class names to the <code>&lt;track&gt;</code> element for styling with CSS.</li>
+                    <li><strong>style:</strong> Applies inline CSS styles directly to the <code>&lt;track&gt;</code> element.</li>
+                    <li><strong>title:</strong> Provides additional information about the <code>&lt;track&gt;</code> element, usually displayed as a tooltip when the user hovers over the track.</li>
+                </ul>
+            </div>
+            <div class="code">
+                &lt;video controls&gt;
+                    &lt;source src="path/to/video.mp4" type="video/mp4"&gt;
+                    &lt;track src="path/to/subtitles_en.vtt" kind="subtitles" srclang="en" label="English"&gt;
+                    &lt;track src="path/to/subtitles_es.vtt" kind="subtitles" srclang="es" label="Spanish"&gt;
+                    Your browser does not support the video tag.
+                &lt;/video&gt;
+            </div>
+        </div>
+
+        <!-- Object Element -->
+        <div class="section">
+            <h2>&lt;object&gt;</h2>
+            <p>
+                The <code>&lt;object&gt;</code> element embeds an external resource, such as a plugin or multimedia content, into the document. It is used for displaying objects like Flash animations or PDFs.
+            </p>
+            <p>
+                The <code>&lt;object&gt;</code> element can specify a fallback content to display if the object cannot be loaded.
+            </p>
+            <div class="explanation">
+                <strong>Attributes:</strong>
+                <ul>
+                    <li><strong>data:</strong> Specifies the URL of the resource to be used by the object.</li>
+                    <li><strong>type:</strong> Specifies the media type of the resource, such as <code>application/pdf</code> or <code>image/jpeg</code>.</li>
+                    <li><strong>width:</strong> Specifies the width of the object.</li>
+                    <li><strong>height:</strong> Specifies the height of the object.</li>
+                    <li><strong>usemap:</strong> Specifies an image as a client-side image-map.</li>
+                    <li><strong>name:</strong> Specifies the name of the object, used for identifying the object.</li>
+                    <li><strong>id:</strong> Provides a unique identifier for the <code>&lt;object&gt;</code> element, useful for targeting with CSS or JavaScript.</li>
+                    <li><strong>class:</strong> Assigns one or more class names to the <code>&lt;object&gt;</code> element for styling with CSS.</li>
+                    <li><strong>style:</strong> Applies inline CSS styles directly to the <code>&lt;object&gt;</code> element.</li>
+                    <li><strong>title:</strong> Provides additional information about the <code>&lt;object&gt;</code> element, usually displayed as a tooltip when the user hovers over the object.</li>
+                </ul>
+            </div>
+            <div class="code">
+                &lt;object data="path/to/resource.pdf" type="application/pdf" width="600" height="400" id="pdfViewer" class="viewer" style="border: 1px solid #ddd;" title="PDF Viewer"&gt;
+                    Your browser does not support PDFs. <a href="path/to/resource.pdf">Download the PDF</a>.
+                &lt;/object&gt;
+            </div>
+        </div>
+
+        <!-- Embed Element -->
+        <div class="section">
+            <h2>&lt;embed&gt;</h2>
+            <p>
+                The <code>&lt;embed&gt;</code> element embeds external content, typically multimedia plugins, into the document. It is used for content such as interactive maps or other applications.
+            </p>
+            <p>
+                Unlike the <code>&lt;object&gt;</code> element, the <code>&lt;embed&gt;</code> element is often used for self-contained content and does not require additional fallback content.
+            </p>
+            <div class="explanation">
+                <strong>Attributes:</strong>
+                <ul>
+                    <li><strong>src:</strong> Specifies the URL of the resource to be embedded.</li>
+                    <li><strong>type:</strong> Specifies the media type of the embedded content, such as <code>application/x-shockwave-flash</code>.</li>
+                    <li><strong>width:</strong> Specifies the width of the embedded content.</li>
+                    <li><strong>height:</strong> Specifies the height of the embedded content.</li>
+                    <li><strong>id:</strong> Provides a unique identifier for the <code>&lt;embed&gt;</code> element, useful for targeting with CSS or JavaScript.</li>
+                    <li><strong>class:</strong> Assigns one or more class names to the <code>&lt;embed&gt;</code> element for styling with CSS.</li>
+                    <li><strong>style:</strong> Applies inline CSS styles directly to the <code>&lt;embed&gt;</code> element.</li>
+                    <li><strong>title:</strong> Provides additional information about the <code>&lt;embed&gt;</code> element, usually displayed as a tooltip when the user hovers over the embedded content.</li>
+                </ul>
+            </div>
+            <div class="code">
+                &lt;embed src="path/to/plugin.swf" type="application/x-shockwave-flash" width="800" height="600" id="flashPlugin" class="plugin" style="border: 1px solid #ddd;" title="Flash Plugin"&gt;
+            </div>
+        </div>
+
+        <!-- Iframe Element -->
+        <div class="section">
+            <h2>&lt;iframe&gt;</h2>
+            <p>
+                The <code>&lt;iframe&gt;</code> element embeds another HTML page within the current document. It allows you to display external content, such as another website, within a frame on your page.
+            </p>
+            <p>
+                The <code>&lt;iframe&gt;</code> element can be used for a variety of purposes, including embedding maps, videos, and external applications.
+            </p>
+            <div class="explanation">
+                <strong>Attributes:</strong>
+                <ul>
+                    <li><strong>src:</strong> Specifies the URL of the document to embed.</li>
+                    <li><strong>width:</strong> Specifies the width of the iframe.</li>
+                    <li><strong>height:</strong> Specifies the height of the iframe.</li>
+                    <li><strong>name:</strong> Specifies the name of the iframe, which can be used as a target for hyperlinks.</li>
+                    <li><strong>sandbox:</strong> Enables an extra set of restrictions for the content in the iframe, such as preventing form submissions or script execution.</li>
+                    <li><strong>allow:</strong> Specifies a feature policy for the iframe, such as allowing access to the camera or microphone.</li>
+                    <li><strong>id:</strong> Provides a unique identifier for the <code>&lt;iframe&gt;</code> element, useful for targeting with CSS or JavaScript.</li>
+                    <li><strong>class:</strong> Assigns one or more class names to the <code>&lt;iframe&gt;</code> element for styling with CSS.</li>
+                    <li><strong>style:</strong> Applies inline CSS styles directly to the <code>&lt;iframe&gt;</code> element.</li>
+                    <li><strong>title:</strong> Provides additional information about the <code>&lt;iframe&gt;</code> element, usually displayed as a tooltip when the user hovers over the iframe.</li>
+                </ul>
+            </div>
+            <div class="code">
+                &lt;iframe src="https://example.com" width="800" height="600" name="myIframe" sandbox="allow-same-origin allow-scripts" allow="camera; microphone" id="myIframe" class="iframe" style="border: 1px solid #ddd;" title="Embedded Content"&gt;&lt;/iframe&gt;
+            </div>
+        </div>
+    </div>
+</body>
+</html>
